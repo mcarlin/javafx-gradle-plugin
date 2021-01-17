@@ -51,11 +51,11 @@ public class JavaFXGradlePlugin implements Plugin<Project> {
         // gradle is lame, so replace existing tasks with MY NAMES ! *battle-cry*
 
         // tasks will be available for the buldscript prior full evaluation
-        JfxJarTask jarTask = project.getTasks().replace(JfxJarTask.JFX_TASK_NAME, JfxJarTask.class);
-        JfxNativeTask nativeTask = project.getTasks().replace(JfxNativeTask.JFX_TASK_NAME, JfxNativeTask.class);
-        JfxGenerateKeystoreTask generateKeystoreTask = project.getTasks().replace(JfxGenerateKeystoreTask.JFX_TASK_NAME, JfxGenerateKeystoreTask.class);
-        JfxRunTask runTask = project.getTasks().replace(JfxRunTask.JFX_TASK_NAME, JfxRunTask.class);
-        JfxListBundlersTask jfxListBundlersTask = project.getTasks().replace(JfxListBundlersTask.JFX_TASK_NAME, JfxListBundlersTask.class);
+        JfxJarTask jarTask = project.getTasks().create(JfxJarTask.JFX_TASK_NAME, JfxJarTask.class);
+        JfxNativeTask nativeTask = project.getTasks().create(JfxNativeTask.JFX_TASK_NAME, JfxNativeTask.class);
+        JfxGenerateKeystoreTask generateKeystoreTask = project.getTasks().create(JfxGenerateKeystoreTask.JFX_TASK_NAME, JfxGenerateKeystoreTask.class);
+        JfxRunTask runTask = project.getTasks().create(JfxRunTask.JFX_TASK_NAME, JfxRunTask.class);
+        JfxListBundlersTask jfxListBundlersTask = project.getTasks().create(JfxListBundlersTask.JFX_TASK_NAME, JfxListBundlersTask.class);
 
         String taskGroupName = "JavaFX";
 
